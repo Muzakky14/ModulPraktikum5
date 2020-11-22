@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat Message </title>
+</head>
+<body style="background-color: blanchedalmond;color: crimson;">
+    <br><br>
+	<div id="Chatnya">
+		
+	</div>
+	<form method="REQUEST" style="text-align: center;">
+        <textarea id="pesan" cols="50" rows="10"></textarea>
+        <br><br>
+		<button onclick="return kirim();">KIRIM PESAN</button>
+	</form>
+	
+</body>
+<script type="text/javascript">
+	function kirim() {
+		pesan = document.getElementById("pesan").value;
+		document.getElementById("isichat").innerHTML = pesan+'\n';
+		
+		return false;
+	}
+</script>
+</html>

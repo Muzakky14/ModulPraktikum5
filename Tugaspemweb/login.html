@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title> Form Login </title>
+    <link rel="styesheet" type="text/css" href="Slogin.css">
+</head>
+<body style="background-color: antiquewhite;color: aqua;">
+    <div class="warper f1">
+        <div class="main">
+            <div class="head">
+    <p> Login Member </p>
+            </div>
+    <div class="form f1">
+                <form method="POST">
+                    <p class="name">
+            username* :</p>
+            <input type="text"  placeholder="username" class="name-inp" id="username" name="username"></p>
+            <p class="name">
+            
+            password* :</p>
+            <p>
+            <input type="password"  placeholder="Password" class="pass" id="password" name="password"></p>
+            <p>
+            <input type="submit" name="sb" value="Submit" class="sub" onclick="return login()"></p>
+</body>
+<script>
+    function login() {
+		username = document.getElementById("username").value;
+		password = document.getElementById("password").value;
+
+		if (username == "" || password == "") {
+			alert("Username / Password Tidak Boleh Kosong");
+			return false;
+		}
+		else if (password.length < 8) {
+			alert("Password Kurang dari 8");
+			return false;
+		}
+		else if (username ==password == "") {
+			window.location = "dashboard.html";
+			return false;
+		}else{
+			alert("Username / Password anda salah");
+		}
+	}
+</script>
+</html>
